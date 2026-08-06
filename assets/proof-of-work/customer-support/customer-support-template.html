@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Portfolio | Billing Issue Resolution</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+            background:#f5f8fc;
+            color:#1e293b;
+            line-height:1.7;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:50px auto;
+            background:#fff;
+            border-radius:16px;
+            overflow:hidden;
+            box-shadow:0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .header{
+            background:#2563eb;
+            color:#fff;
+            padding:40px;
+        }
+
+        .header h1{
+            font-size:2rem;
+            margin-bottom:10px;
+        }
+
+        .header p{
+            opacity:.9;
+        }
+
+        .content{
+            padding:40px;
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin:30px;
+            text-decoration:none;
+            color:#2563eb;
+            font-weight:600;
+        }
+
+        .back-btn i{
+            margin-right:8px;
+        }
+.ticket-card{
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:30px;
+}
+
+.ticket-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.ticket-info{
+    display:flex;
+    justify-content:space-between;
+    margin:25px 0;
+}
+
+.customer-message,
+.agent-response{
+    margin-top:15px;
+    margin-bottom:30px;
+    background:#f8fafc;
+    padding:20px;
+    border-left:5px solid #2563eb;
+    border-radius:8px;
+}
+
+.resolved{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+h3{
+    margin-top:25px;
+    margin-bottom:10px;
+    color:#2563eb;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #e5e7eb;
+    margin:25px 0;
+}
+.resolution-box{
+    background:#eefaf3;
+    border-left:6px solid #22c55e;
+    border-radius:12px;
+    padding:25px;
+    color:#1f2937;
+}
+
+.resolution-box ul{
+    color:#1f2937;
+}
+
+.resolution-box li{
+    color:#1f2937;
+    margin-bottom:10px;
+}
+
+.portfolio-note{
+    background:#eef4ff;
+    padding:30px;
+    border-radius:12px;
+    color:#1f2937;
+}
+
+.portfolio-note p{
+    color:#1f2937;
+}
+
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.skills-grid span{
+    background:#ffffff;
+    color:#2563eb;
+    padding:12px 20px;
+    border-radius:40px;
+    font-weight:600;
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+}
+
+
+.portfolio-note{
+    background:#eef4ff;
+    padding:30px;
+    border-radius:12px;
+    color:#1f2937;
+    margin-top:20px;
+}
+/* ===========================
+   Ticket Information Card
+=========================== */
+
+.ticket-info-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:35px;
+    margin:45px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.ticket-info-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:20px;
+}
+
+.ticket-info-header h2{
+    color:#1e3a8a;
+    font-size:2rem;
+}
+
+.ticket-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.ticket-item{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+}
+
+.ticket-item .label{
+    display:block;
+    color:#64748b;
+    font-size:.85rem;
+    margin-bottom:8px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
+
+.ticket-item strong{
+    font-size:1.05rem;
+    color:#1e293b;
+}
+
+.status.resolved{
+    color:#16a34a;
+    font-weight:700;
+    font-size:1rem;
+}
+/* ==========================
+   Conversation Layout
+========================== */
+
+.conversation{
+
+    margin-top:40px;
+
+}
+
+.chat{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+    align-items:flex-start;
+
+}
+
+.avatar{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:1.1rem;
+
+    flex-shrink:0;
+
+}
+
+.customer-avatar{
+
+    background:#64748b;
+
+}
+
+.agent-avatar{
+
+    background:#2563eb;
+
+}
+
+.chat-content{
+
+    flex:1;
+
+}
+
+.chat-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+}
+
+.chat-header strong{
+
+    color:#1e293b;
+
+}
+
+.chat-header span{
+
+    color:#64748b;
+
+    font-size:.9rem;
+
+}
+
+.chat-bubble{
+
+    padding:24px;
+
+    border-radius:16px;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+.customer{
+
+    background:#f8fafc;
+
+    border-left:5px solid #94a3b8;
+
+}
+
+.agent{
+
+    background:#eef4ff;
+
+    border-left:5px solid #2563eb;
+
+}
+    </style>
+
+</head>
+
+<body>
+
+<a href="../../index.html" class="back-btn">
+<i class="fa-solid fa-arrow-left"></i>
+Back to Portfolio
+</a>
+
+<div class="container">
+
+<div class="header">
+
+<h1>Customer Support Sample 01</h1>
+
+<p>Billing Issue Resolution</p>
+<hr>
+
+<h3>Resolution Summary</h3>
+
+<div class="resolution-box">
+
+    <ul>
+        <li>✔ Duplicate payment confirmed after account review.</li>
+        <li>✔ Refund request successfully initiated.</li>
+        <li>✔ Confirmation email sent to the customer.</li>
+        <li>✔ Customer informed of the expected refund timeline.</li>
+        <li>✔ Ticket resolved during the first interaction.</li>
+    </ul>
+
+</div>
+
+<h3>Skills Demonstrated</h3>
+
+<div class="skills-grid">
+
+    <span>Empathy</span>
+    <span>Professional Writing</span>
+    <span>Problem Solving</span>
+    <span>Attention to Detail</span>
+    <span>Billing Support</span>
+    <span>Customer Communication</span>
+
+</div>
+
+<div class="portfolio-note">
+
+    <h3>Portfolio Note</h3>
+
+    <p>
+
+        This is a portfolio demonstration created to showcase my customer support communication,
+        problem-solving approach, and professional writing style.
+
+        It is intended to demonstrate the quality of support I provide and does not represent an actual customer interaction.
+
+    </p>
+
+</div>
+</div>
+
+<div class="content">
+
+    <!-- Ticket Information -->
+<div class="ticket-info-card">
+
+    <div class="ticket-info-header">
+        <h2>Support Ticket Information</h2>
+        <span class="status resolved">● Resolved</span>
+    </div>
+
+    <div class="ticket-grid">
+
+        <div class="ticket-item">
+            <span class="label">Ticket ID</span>
+            <strong>#10452</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Company</span>
+            <strong>Acme Software Ltd.</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Customer</span>
+            <strong>Sarah Johnson</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Assigned Agent</span>
+            <strong>Prince Onyenwe</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Created</span>
+            <strong>05 Aug 2026 • 10:22 AM</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">First Response</span>
+            <strong>2 Minutes</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Resolution Time</span>
+            <strong>15 Minutes</strong>
+        </div>
+
+        <div class="ticket-item">
+            <span class="label">Customer Satisfaction</span>
+            <strong>★★★★★ 5.0</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="ticket-card">
+
+    <div class="ticket-header">
+
+        <div>
+            <h2>Ticket #10452</h2>
+            <p>Billing Support Request</p>
+        </div>
+
+        <div class="status">
+            <span class="resolved">● Resolved</span>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="ticket-info">
+
+        <div>
+            <strong>Priority</strong><br>
+            Medium
+        </div>
+
+        <div>
+            <strong>Category</strong><br>
+            Billing
+        </div>
+
+        <div>
+            <strong>Channel</strong><br>
+            Email Support
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Conversation -->
+
+<div class="conversation">
+
+    <div class="chat customer-chat">
+
+        <div class="avatar customer-avatar">
+            SJ
+        </div>
+
+        <div class="chat-content">
+
+            <div class="chat-header">
+                <strong>Sarah Johnson</strong>
+                <span>Customer • 10:22 AM</span>
+            </div>
+
+            <div class="chat-bubble customer">
+
+                Hi,
+
+                <br><br>
+
+                I noticed I was charged twice for my monthly subscription. I only intended to make one payment, and I'm worried because I haven't received any confirmation regarding the duplicate charge.
+
+                <br><br>
+
+                Could you please help me resolve this?
+
+                <br><br>
+
+                Thank you.
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="chat agent-chat">
+
+        <div class="avatar agent-avatar">
+            PO
+        </div>
+
+        <div class="chat-content">
+
+            <div class="chat-header">
+                <strong>Prince Onyenwe</strong>
+                <span>Support Agent • 10:24 AM</span>
+            </div>
+
+            <div class="chat-bubble agent">
+
+                Hello Sarah,
+
+                <br><br>
+
+                Thank you for contacting us.
+
+                I'm sorry to hear about the duplicate charge, and I completely understand how concerning unexpected billing issues can be.
+
+                <br><br>
+
+                After reviewing your account, I confirmed that two payments were processed for the same billing cycle.
+
+                <br><br>
+
+                I've initiated a refund request for the duplicate payment, and you'll receive a confirmation email shortly.
+
+                <br><br>
+
+                Depending on your bank, the refund should reflect within 3–5 business days.
+
+                <br><br>
+
+                Thank you for your patience.
+
+                Please let me know if there's anything else I can assist you with.
+
+                <br><br>
+
+                Kind regards,
+
+                <br>
+
+                Prince Onyenwe
+
+                <br>
+
+                Customer Support
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

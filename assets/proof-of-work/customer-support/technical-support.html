@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Case Study 05 | Technical Support</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8fc;
+color:#1e293b;
+}
+
+.container{
+max-width:1200px;
+margin:50px auto;
+padding:20px;
+}
+
+.back-btn{
+display:inline-block;
+margin-bottom:25px;
+text-decoration:none;
+color:#2563eb;
+font-weight:600;
+}
+
+.header{
+background:linear-gradient(135deg,#7c3aed,#6d28d9);
+padding:45px;
+border-radius:20px;
+color:#fff;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+margin-bottom:35px;
+}
+
+.header h1{
+font-size:2.3rem;
+margin-bottom:10px;
+}
+
+.header p{
+opacity:.9;
+font-size:1.05rem;
+}
+
+.ticket-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:50px;
+}
+
+.ticket-card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.ticket-card small{
+display:block;
+margin-bottom:8px;
+color:#64748b;
+}
+
+.ticket-card strong{
+font-size:1.05rem;
+}
+
+.status{
+color:#16a34a;
+font-weight:700;
+}
+
+.case-section{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+margin-bottom:35px;
+}
+
+.case-section h2{
+margin-bottom:30px;
+color:#6d28d9;
+}
+
+.message{
+margin-bottom:30px;
+}
+
+.message-header{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:15px;
+}
+
+.avatar{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+color:#fff;
+background:#64748b;
+}
+
+.agent-avatar{
+background:#2563eb;
+}
+
+.message-body{
+background:#f8fafc;
+padding:25px;
+border-radius:15px;
+line-height:1.9;
+white-space:pre-line;
+}
+
+.agent .message-body{
+background:#eef4ff;
+border-left:5px solid #2563eb;
+}
+
+.customer .message-body{
+border-left:5px solid #7c3aed;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../../index.html" class="back-btn">← Back to Portfolio</a>
+
+<div class="header">
+
+<h1>Case Study 05</h1>
+
+<p>Technical Support & Troubleshooting</p>
+
+</div>
+
+<div class="ticket-grid">
+
+<div class="ticket-card">
+<small>Company</small>
+<strong>Acme Software Ltd.</strong>
+</div>
+
+<div class="ticket-card">
+<small>Ticket ID</small>
+<strong>#10658</strong>
+</div>
+
+<div class="ticket-card">
+<small>Customer</small>
+<strong>David Miller</strong>
+</div>
+
+<div class="ticket-card">
+<small>Support Agent</small>
+<strong>Prince Onyenwe</strong>
+</div>
+
+<div class="ticket-card">
+<small>Status</small>
+<strong class="status">Resolved</strong>
+</div>
+
+<div class="ticket-card">
+<small>Resolution Time</small>
+<strong>18 Minutes</strong>
+</div>
+
+</div>
+
+<section class="case-section">
+
+<h2>Customer Conversation</h2>
+
+<div class="message customer">
+
+<div class="message-header">
+
+<div class="avatar">DM</div>
+
+<div>
+<strong>David Miller</strong><br>
+<small>Customer</small>
+</div>
+
+</div>
+
+<div class="message-body">
+
+Hello,
+
+Since the latest update, the application crashes every time I try to upload a document.
+
+I've already restarted my computer and reinstalled the application, but the issue still persists.
+
+Could you help me fix this?
+
+</div>
+
+</div>
+
+<div class="message agent">
+
+<div class="message-header">
+
+<div class="avatar agent-avatar">PO</div>
+
+<div>
+<strong>Prince Onyenwe</strong><br>
+<small>Customer Support Specialist</small>
+</div>
+
+</div>
+
+<div class="message-body">
+
+Hello David,
+
+Thank you for reporting the issue.
+
+After reviewing the error logs, I identified that the crashes were caused by an outdated cache file created before the latest update.
+
+I guided you through clearing the application cache and restarting the software.
+
+After performing those steps, we confirmed that document uploads were working normally again.
+
+I'm glad we were able to resolve the issue.
+
+Please feel free to contact us anytime you need assistance.
+
+Kind regards,
+
+Prince Onyenwe
+
+Customer Support Specialist
+
+</div>
+
+</div>
+
+</section>
+
+<section class="case-section">
+
+<h2>Resolution Summary</h2>
+
+<ul style="padding-left:20px;line-height:2;">
+
+<li>Collected details about the issue.</li>
+
+<li>Reviewed possible causes.</li>
+
+<li>Identified corrupted cache files.</li>
+
+<li>Guided customer through troubleshooting.</li>
+
+<li>Verified successful resolution.</li>
+
+</ul>
+
+</section>
+
+<section class="case-section">
+
+<h2>Skills Demonstrated</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span style="background:#7c3aed;color:#fff;padding:10px 18px;border-radius:30px;">Technical Troubleshooting</span>
+
+<span style="background:#7c3aed;color:#fff;padding:10px 18px;border-radius:30px;">Problem Diagnosis</span>
+
+<span style="background:#7c3aed;color:#fff;padding:10px 18px;border-radius:30px;">Customer Guidance</span>
+
+<span style="background:#7c3aed;color:#fff;padding:10px 18px;border-radius:30px;">Communication</span>
+
+<span style="background:#7c3aed;color:#fff;padding:10px 18px;border-radius:30px;">Issue Resolution</span>
+
+</div>
+
+</section>
+
+<section class="case-section">
+
+<h2>Portfolio Note</h2>
+
+<p style="line-height:1.9;">
+
+This case study demonstrates my ability to diagnose technical issues, communicate troubleshooting steps clearly, and guide customers toward successful resolutions while maintaining a positive support experience.
+
+</p>
+
+</section>
+
+</div>
+
+</body>
+</html>

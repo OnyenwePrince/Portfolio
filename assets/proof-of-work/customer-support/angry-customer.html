@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Case Study 03 | Angry Customer De-escalation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8fc;
+color:#1e293b;
+}
+
+.container{
+max-width:1200px;
+margin:50px auto;
+padding:20px;
+}
+
+.back-btn{
+display:inline-block;
+margin-bottom:25px;
+text-decoration:none;
+color:#2563eb;
+font-weight:600;
+}
+
+.header{
+background:linear-gradient(135deg,#dc2626,#b91c1c);
+padding:45px;
+border-radius:20px;
+color:#fff;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+margin-bottom:35px;
+}
+
+.header h1{
+font-size:2.3rem;
+margin-bottom:10px;
+}
+
+.header p{
+opacity:.9;
+font-size:1.05rem;
+}
+
+.ticket-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:50px;
+}
+
+.ticket-card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.ticket-card small{
+display:block;
+margin-bottom:8px;
+color:#64748b;
+}
+
+.ticket-card strong{
+font-size:1.05rem;
+}
+
+.status{
+color:#16a34a;
+font-weight:700;
+}
+
+.case-section{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+margin-bottom:35px;
+}
+
+.case-section h2{
+margin-bottom:30px;
+color:#991b1b;
+}
+
+.message{
+margin-bottom:30px;
+}
+
+.message-header{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:15px;
+}
+
+.avatar{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+color:#fff;
+background:#64748b;
+}
+
+.agent-avatar{
+background:#2563eb;
+}
+
+.message-body{
+background:#f8fafc;
+padding:25px;
+border-radius:15px;
+line-height:1.9;
+white-space:pre-line;
+}
+
+.agent .message-body{
+background:#eef4ff;
+border-left:5px solid #2563eb;
+}
+
+.customer .message-body{
+border-left:5px solid #ef4444;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../../index.html" class="back-btn">← Back to Portfolio</a>
+
+<div class="header">
+
+<h1>Case Study 03</h1>
+
+<p>Angry Customer De-escalation</p>
+
+</div>
+
+<div class="ticket-grid">
+
+<div class="ticket-card">
+<small>Company</small>
+<strong>Acme Software Ltd.</strong>
+</div>
+
+<div class="ticket-card">
+<small>Ticket ID</small>
+<strong>#10581</strong>
+</div>
+
+<div class="ticket-card">
+<small>Customer</small>
+<strong>Emma Wilson</strong>
+</div>
+
+<div class="ticket-card">
+<small>Support Agent</small>
+<strong>Prince Onyenwe</strong>
+</div>
+
+<div class="ticket-card">
+<small>Status</small>
+<strong class="status">Resolved</strong>
+</div>
+
+<div class="ticket-card">
+<small>Resolution Time</small>
+<strong>12 Minutes</strong>
+</div>
+
+</div>
+
+<section class="case-section">
+
+<h2>Customer Conversation</h2>
+
+<div class="message customer">
+
+<div class="message-header">
+
+<div class="avatar">EW</div>
+
+<div>
+<strong>Emma Wilson</strong><br>
+<small>Customer</small>
+</div>
+
+</div>
+
+<div class="message-body">
+
+I'm honestly very disappointed.
+
+I've contacted support twice already and nobody has resolved my issue.
+
+I've been charged, my order hasn't arrived, and nobody seems to care.
+
+If this isn't fixed today, I'll cancel my subscription and leave a negative review.
+
+</div>
+
+</div>
+
+<div class="message agent">
+
+<div class="message-header">
+
+<div class="avatar agent-avatar">PO</div>
+
+<div>
+<strong>Prince Onyenwe</strong><br>
+<small>Customer Support Specialist</small>
+</div>
+
+</div>
+
+<div class="message-body">
+
+Hello Emma,
+
+Thank you for reaching out, and I'm sincerely sorry for the frustration you've experienced.
+
+I completely understand why you're upset, especially after contacting us multiple times without a resolution.
+
+I've personally reviewed your order and found that it was delayed because of a courier processing error.
+
+I've arranged for an immediate priority shipment at no additional cost and also added a service credit to your account as an apology for the inconvenience.
+
+You'll receive a tracking email within the next few minutes.
+
+Thank you for giving us the opportunity to make this right.
+
+Kind regards,
+
+Prince Onyenwe
+
+Customer Support Specialist
+
+</div>
+
+</div>
+
+</section>
+
+<section class="case-section">
+
+<h2>Resolution Summary</h2>
+
+<ul style="padding-left:20px;line-height:2;">
+
+<li>Customer's concerns acknowledged with empathy.</li>
+
+<li>Order delay investigated immediately.</li>
+
+<li>Priority shipment arranged.</li>
+
+<li>Compensation applied to the customer's account.</li>
+
+<li>Customer agreed to keep the subscription.</li>
+
+</ul>
+
+</section>
+
+<section class="case-section">
+
+<h2>Skills Demonstrated</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span style="background:#dc2626;color:#fff;padding:10px 18px;border-radius:30px;">Conflict Resolution</span>
+
+<span style="background:#dc2626;color:#fff;padding:10px 18px;border-radius:30px;">Empathy</span>
+
+<span style="background:#dc2626;color:#fff;padding:10px 18px;border-radius:30px;">Customer Retention</span>
+
+<span style="background:#dc2626;color:#fff;padding:10px 18px;border-radius:30px;">Problem Solving</span>
+
+<span style="background:#dc2626;color:#fff;padding:10px 18px;border-radius:30px;">Professional Communication</span>
+
+</div>
+
+</section>
+
+<section class="case-section">
+
+<h2>Portfolio Note</h2>
+
+<p style="line-height:1.9;">
+
+This case study demonstrates my ability to remain calm under pressure, de-escalate difficult customer situations, and restore customer confidence through empathy, ownership, and effective problem resolution.
+
+</p>
+
+</section>
+
+</div>
+
+</body>
+</html>
